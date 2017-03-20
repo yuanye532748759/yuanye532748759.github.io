@@ -1,0 +1,375 @@
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    background-color: #c0c0c0;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+body {
+    overflow: hidden;
+
+}
+html{
+    font-size:1em;
+}
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+a {
+    text-decoration: none !important;
+    color: #5a5a5a;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+#container {
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    max-width: 640px;
+    position: relative;
+}
+aside {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 99;
+    top: 20px;
+    right: 20px;
+}
+aside.musicAn {
+    animation: musicAnimation 2s linear infinite
+}
+
+@keyframes musicAnimation {
+    0% {
+        transform: rotate(0deg);
+
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+aside .musicPlay {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.go-next {
+    text-decoration: none;
+    text-align: center;
+    color: deeppink;
+    font-size: 36px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -15px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 99;
+    cursor: pointer;
+    background-image: url("../image/next.png");
+    background-size: cover;
+    animation: myAnimation 1s linear infinite
+}
+
+.go-up {
+    text-decoration: none;
+    text-align: center;
+    color: deeppink;
+    font-size: 36px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    margin-left: -15px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 99;
+    cursor: pointer;
+    background-image: url("../image/up.png");
+    background-size: cover;
+    animation: myAnimation 1s linear infinite
+}
+
+@keyframes myAnimation {
+    0%, 30% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, -10px);
+    }
+}
+
+.pages {
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: all 1s linear;
+}
+
+ul.pages > li {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.page0{
+    width: 100%;
+    height: 100%;
+    background:url("../image/second.jpg") center/cover no-repeat;
+}
+.page1{
+    width: 100%;
+    height: 100%;
+    background:url("../image/first.jpg") center/cover ;
+    position:relative;
+}
+.page2{
+    width: 100%;
+    height: 100%;
+    background:url("../image/page2.jpg") center/cover ;
+}
+.page3{
+    width: 100%;
+    height: 100%;
+    background:url("../image/page5.jpg") center/cover ;
+}
+.page4{
+    width: 100%;
+    height: 100%;
+    background:url("../image/page4.jpg") center/cover ;
+}
+#page1 img.fly{
+    position:absolute;
+    right:0;
+    top:0;
+}
+#page1 .personBox{
+     width:243px;
+     margin:-500px auto 0 auto;
+    text-align:center;
+}
+#page1 .personBox img{
+    display:block;
+}
+#page1 img.fly1{
+    transform:rotate(-30deg);
+}
+#page1 img.fly2{
+    transform:rotate(-45deg);
+}
+#page1 img.fly3{
+    transform:rotate(-60deg);
+}
+#page1 img.bubble{
+    width: 100px;
+    height: 100px;
+    top:200px;
+    left:200px;
+}
+#page1 .footer{
+    width: 100%;
+    text-align:center;
+     color:#f2f2f2;
+     font-size:2em;
+     position:absolute;
+     top:70%;
+
+}
+#page2 .information{
+    text-shadow:1px 1px #00c9ff,
+    -1px -1px #8500ff;
+    margin-bottom:30px;
+    font-size:1.5rem;
+    text-align:center;
+    font-style: italic;
+}
+#personBox{
+    display:flex;
+    justify-content:space-around;
+}
+#page2 .myself{
+    width:126px;
+    height: 126px;
+    border-radius: 50%;
+    background:url('../image/myself.png') top/cover;
+    box-shadow:0px 1px #004fff;
+    margin:30px auto;
+}
+#page2 .tel{
+    width: 90%;
+    text-align:center;
+    margin:0 auto;
+    border:1px solid deepskyblue;
+    border-radius:10px;
+    margin-bottom:35px;
+    color:#00e5ff;
+    font-size:1.2em;
+    font-style: oblique;
+}
+#page2 .github{
+    width: 90%;
+    text-align:center;
+    margin:0 auto;
+    border:1px solid deepskyblue;
+    border-radius:10px;
+    cursor:pointer;
+    display:none;
+}
+#page2 .github a{
+    display:block;
+    color:#00e5ff;
+    font-size:1.2rem;
+}
+#personBox{
+    margin-bottom:30px;
+}
+#personBox .personal{
+    margin-left:-5000px;
+    width: 50%;
+}
+#personBox .oneself{
+    margin-right:-5000px;
+    width: 50%;
+}
+#personBox ul li{
+    color: rgb(83, 243, 219);
+    min-height:38px;
+    min-width:124px;
+    padding:10px;
+    line-height:38px;
+    font-size:1em;
+}
+
+
+#page3{
+    width:100%;
+    height:100%;
+}
+#page3 #nav{
+    width: 100px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+#page3 #nav li{
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color:red;
+    cursor:pointer;
+    border-radius:50%;
+
+    transition:all 0.5s linear;
+}
+#page3 #nav li.bg{
+    background-color:#00bbff;
+    opacity:0.5;
+}
+#page3 .rightContainer{
+    overflow:hidden;
+    height:100%;
+    /*width:100%;*/
+}
+#page3 .rightContainer div{
+    height:100%;
+    display:none;
+    width:100%;
+}
+
+#page3 .rightContainer div.active{
+    display:block;
+
+}
+#page3 .show-text {
+    font-size: 30px;
+    color: pink;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 2px 2px pink, -2px -2px yellow;
+    position: absolute;
+    top: 80px;;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: none;
+}
+
+#page4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.firstImg {
+    background-image: url("../newMarried/bg1.jpg");
+    background-position: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -300px;
+    bottom: -300px;
+    border-radius: 50%;
+    display: block;
+}
+
+.secondImg {
+    background-image: url("../newMarried/bg2.jpg");
+    background-position: center;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+    right: -100px;
+    bottom: -100px;
+    border-radius: 50%;
+}
+
+.imgBox {
+    position: absolute;
+    width: 100%;
+    /*min-width: 320px;*/
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.imgBox img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    /*border-radius:50%;*/
+}
